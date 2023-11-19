@@ -1,5 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;600;700&family=Roboto:wght@100;300;400;500&display=swap');
 
+@media (min-width: 1440px) { 
+    .nav-primary {
+        padding: 8px 80px;
+    }
+    .center-section{
+        padding: 8px 80px;
+    }
+    .contentGrid{
+        padding: 8px 80px;
+    }
+    .landingPopup p {
+        font-size: 18px;
+    }
+    
+}
+
 
 *{
     margin: 0;
@@ -124,4 +140,85 @@
 .nav-secondary .nav-menu .userIcon {
     width: 30px;
     padding: 6px 6px;
+}
+
+.center-section {
+    padding: 8px 40px;
+    margin-top: 15px;
+    margin-bottom: 18px;
+    display: flex;
+    justify-content: space-between;
+    /*border-bottom: 1px solid #E8E8E8;*/
+    
+}
+
+.center-primary {
+    width: 70%;
+    display: inline-block;
+    overflow-x: hidden;
+    position: relative;
+    vertical-align: middle;
+}
+.center-section ul {
+    
+    list-style: none;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.center-section ul li{
+    cursor: pointer;
+    opacity: 0.6;
+
+}
+
+.center-section ul li:hover{
+    opacity:1;
+}
+
+.icons-center img {
+    width: 24px;
+    display: block;
+    margin: auto;
+}
+
+
+.icons-center p {
+    margin-top: 5px;
+    font-size: 12px;
+    font-weight: 700;
+    
+
+}
+
+.center-section ul li:hover p{
+    border-bottom: 3px solid;
+    padding-bottom: 7px;
+}
+
+.filter-bar{
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 15px;
+    border: 1.5px solid #E8E8E8;
+    height: fit-content;
+    padding: 2px 14px;
+    cursor: pointer;
+
+
+}
+.filter-bar img{
+    display: inline-block;
+    padding: 13px 6px;
+    width: 17px;
+    height: auto;
+    vertical-align: middle;
+}
+.filter-bar p {
+    display: inline-block;
+    vertical-align: middle;
+    font-weight: 500;
+    font-size: 13px;
 }
