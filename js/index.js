@@ -11,36 +11,36 @@ document.addEventListener('DOMContentLoaded', function() {
             heartIcon.classList.toggle('filled', isLiked);
         });
     });
+
     const taxCheckbox = document.getElementById('switch');
-    const amountElements = document.querySelectorAll('b.output-rate'); 
+    const amountElements = document.querySelectorAll('b.output-rate');
+
+    function calculateTotalAmount(initialAmount, isChecked) {
+        if (isChecked) {
+            const taxAmount = initialAmount * 0.18;
+            const totalAmount = initialAmount + taxAmount;
+            return `₹${totalAmount.toFixed(2)}`;
+        }
+        return `₹${initialAmount.toFixed(2)}`;
+    }
 
     if (amountElements.length > 0 && taxCheckbox) {
         amountElements.forEach(amountElement => {
-            const initialAmount = parseFloat(amountElement.textContent.replace(/[^\d.]/g, '')); 
+            const initialAmount = parseFloat(amountElement.textContent.replace(/[^\d.]/g, ''));
 
-            function calculateTotalAmount() {
-                const isChecked = taxCheckbox.querySelector('input').checked; 
-
-                if (isChecked) {
-                    const taxAmount = initialAmount * 0.18;
-                    const totalAmount = initialAmount + taxAmount;
-
-                    
-                    amountElement.textContent = `₹${totalAmount.toFixed(2)}`; 
-                   
-                    amountElement.textContent = `₹${initialAmount.toFixed(2)}`;
-                }
+            function updateAmount() {
+                const isChecked = taxCheckbox.querySelector('input').checked;
+                const newAmount = calculateTotalAmount(initialAmount, isChecked);
+                amountElement.textContent = newAmount;
             }
 
-            taxCheckbox.addEventListener('change', calculateTotalAmount);
-            calculateTotalAmount();
+            taxCheckbox.addEventListener('change', updateAmount);
+            updateAmount();
         });
     } else {
         console.error("Elements with class 'output-rate' or 'switch' not found.");
     }
-});
 
-document.addEventListener('DOMContentLoaded', function() {
     const gridBoxes = document.querySelectorAll('.grid-container');
 
     gridBoxes.forEach(gridBox => {
@@ -72,4 +72,6 @@ document.addEventListener('DOMContentLoaded', function() {
             prevButton.style.display = currentSlide === 0 ? 'none' : 'block';
         }
     });
+
+    
 });
