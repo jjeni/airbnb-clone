@@ -1,224 +1,481 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;600;700&family=Roboto:wght@100;300;400;500&display=swap');
-
-@media (min-width: 1440px) { 
-    .nav-primary {
-        padding: 8px 80px;
-    }
-    .center-section{
-        padding: 8px 80px;
-    }
-    .contentGrid{
-        padding: 8px 80px;
-    }
-    .landingPopup p {
-        font-size: 18px;
-    }
-    
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', sans-serif;
 }
 
-
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Noto Sans Jp', sans-serif;
-}
-
-.nav-primary{
-    border-bottom: 1px solid #E8E8E8;
-    display: flex;
-    padding: 8px 40px;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 90%;
+.nav-primary {
+	border-bottom: 1px solid #E8E8E8;
+	display: flex;
+	padding: 8px 40px;
+	align-items: center;
+	justify-content: space-between;
+	font-size: 90%;
 
 }
 
-.landingPopup {
-    background-color: #F7F7F7;
-    padding: 20px 0;
-    border-bottom: 1px solid #E8E8E8;
-}
-
-.landingPopup p {
-    text-align: center;
-    font-size: 16px;
-    text-decoration: underline;
-    cursor: pointer; 
-    width: 40%;
-    margin: auto;
-    font-weight: 500;
-}
 .nav-logo {
-    display: inline-block;
-    width: 21%;
-    padding: 0;
+	display: inline-block;
+	width: 21%;
+	padding: 0;
 }
+
 .nav-logo img {
-    width: 125px;
-    padding: 0;
+	width: 125px;
+	padding: 0;
 }
 
 .nav-middle {
-    list-style: none;
-    border-radius: 50px;
-    border: 1px solid #E8E8E8;
-    height: fit-content;
-    padding: 3px 7px;
-    box-shadow: 1px 2px 6px 0px #E8E8E8;
-    cursor: pointer;
+	list-style: none;
+	border-radius: 50px;
+	border: 1px solid #E8E8E8;
+	height: fit-content;
+	padding: 3px 7px;
+	box-shadow: 1px 2px 6px 0px #E8E8E8;
+	cursor: pointer;
 }
 
 .nav-middle:hover {
-    box-shadow: 0px 4px 5px 0px #E8E8E8;
-    transition: 0.3s;
+	box-shadow: 0px 4px 5px 0px #E8E8E8;
+	transition: 0.3s;
 }
 
 .nav-middle li {
-    display: inline-block;
-    vertical-align: middle;
-    padding: 2px 12px;
-    border-right: 2px solid #E8E8E8;
-    font-weight: 500;
+	display: inline-block;
+	vertical-align: middle;
+	padding: 2px 12px;
+	border-right: 2px solid #E8E8E8;
+	font-weight: 600;
 }
 
 .nav-middle .nav-last {
-    border-right: none;
-    font-weight: 400;
-    color: #717171;
+	border-right: none;
+	font-weight: 400;
+	color: #717171;
 }
-.nav-middle .nav-search{
 
-    padding: 5px 5px 5px 1px;
-    border-right: none;
+.nav-middle .nav-search {
+
+	padding: 5px 5px 5px 1px;
+	border-right: none;
 }
+
 .nav-search img {
-    background-color: #FF385C;
-    color: #fff;
-    width: 13px;
-    padding: 7px;
-    border-radius: 50px;
+	background-color: #FF385C;
+	color: #fff;
+	width: 13px;
+	padding: 7px;
+	border-radius: 50px;
 }
 
 .nav-secondary {
-    justify-content: space-around;
-    display: inline-block;
+	justify-content: space-around;
+	display: inline-block;
 }
 
 .nav-home {
-    display: inline-block; 
-    font-weight: 500;
-  
+	display: inline-block;
+	font-weight: 500;
+
 }
 
 
 .nav-secondary img {
-    width: 17px;
-    display: inline-block;
-    vertical-align: middle;
-    padding: 0 20px;
+	width: 17px;
+	display: inline-block;
+	vertical-align: middle;
+	padding: 0 20px;
 }
 
 .nav-menu {
-    display: inline-block;
-    vertical-align: middle;
-    border-radius: 50px;
-    border: 1.5px solid #E8E8E8;
-    height: fit-content;
-    padding: 3px 7px;
-    cursor: pointer;
+	display: inline-block;
+	vertical-align: middle;
+	border-radius: 50px;
+	border: 1.5px solid #E8E8E8;
+	height: fit-content;
+	padding: 3px 7px;
+	cursor: pointer;
 }
+
 .nav-menu:hover {
-    box-shadow: 0px 4px 5px 0px #E8E8E8;
-    transition: 0.3s;
+	box-shadow: 0px 4px 5px 0px #E8E8E8;
+	transition: 0.3s;
 }
 
 .nav-secondary .nav-menu .menuIcon {
-    width: 17px;
-    padding: 6px 6px;
+	width: 17px;
+	padding: 6px 6px;
 }
 
 .nav-secondary .nav-menu .userIcon {
-    width: 30px;
-    padding: 6px 6px;
+	width: 30px;
+	padding: 6px 6px;
 }
 
 .center-section {
-    padding: 8px 40px;
-    margin-top: 15px;
-    margin-bottom: 18px;
-    display: flex;
-    justify-content: space-between;
-    /*border-bottom: 1px solid #E8E8E8;*/
-    
+	padding: 8px 40px;
+	margin-top: 15px;
+	margin-bottom: 18px;
+	display: flex;
+	justify-content: space-between;
+	/*border-bottom: 1px solid #E8E8E8;*/
+
 }
 
 .center-primary {
-    width: 70%;
-    display: inline-block;
-    overflow-x: hidden;
-    position: relative;
-    vertical-align: middle;
+	width: 70%;
+	display: inline-block;
+	overflow-x: hidden;
+	position: relative;
+	vertical-align: middle;
 }
+
 .center-section ul {
-    
-    list-style: none;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
+
+	list-style: none;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
 
 }
 
-.center-section ul li{
-    cursor: pointer;
-    opacity: 0.6;
+.center-section ul li {
+	cursor: pointer;
+	opacity: 0.6;
 
 }
 
-.center-section ul li:hover{
-    opacity:1;
+.center-section ul li:hover {
+	opacity: 1;
 }
 
 .icons-center img {
-    width: 24px;
-    display: block;
-    margin: auto;
+	width: 24px;
+	display: block;
+	margin: auto;
 }
 
 
 .icons-center p {
-    margin-top: 5px;
-    font-size: 12px;
-    font-weight: 700;
-    
-
-}
-
-.center-section ul li:hover p{
-    border-bottom: 3px solid;
-    padding-bottom: 7px;
-}
-
-.filter-bar{
-    display: inline-block;
-    vertical-align: middle;
-    border-radius: 15px;
-    border: 1.5px solid #E8E8E8;
-    height: fit-content;
-    padding: 2px 14px;
-    cursor: pointer;
+	margin-top: 5px;
+	font-size: 12px;
+	font-weight: 700;
 
 
 }
-.filter-bar img{
-    display: inline-block;
-    padding: 13px 6px;
-    width: 17px;
-    height: auto;
-    vertical-align: middle;
+
+.center-section ul li:hover p {
+	border-bottom: 3px solid;
+	padding-bottom: 7px;
 }
+
+.filter-bar {
+	display: inline-block;
+	vertical-align: middle;
+	border-radius: 15px;
+	border: 1.5px solid #E8E8E8;
+	height: fit-content;
+	padding: 2px 14px;
+	cursor: pointer;
+
+
+}
+
+.filter-bar img {
+	display: inline-block;
+	padding: 13px 6px;
+	width: 17px;
+	height: auto;
+	vertical-align: middle;
+}
+
 .filter-bar p {
-    display: inline-block;
-    vertical-align: middle;
-    font-weight: 500;
-    font-size: 13px;
+	display: inline-block;
+	vertical-align: middle;
+	font-weight: 500;
+	font-size: 13px;
+}
+
+
+.tax-bar {
+	display: inline-block;
+	vertical-align: middle;
+	border-radius: 15px;
+	border: 1.5px solid #E8E8E8;
+	height: fit-content;
+	padding: 2px 14px 2px 14px;
+	cursor: pointer;
+}
+
+.tax-bar p {
+	display: inline-block;
+	vertical-align: middle;
+	font-weight: 500;
+	font-size: 13px;
+	padding: 13px 6px 13px 6px;
+}
+
+.tax-bar .switch {
+	vertical-align: middle;
+}
+
+
+/* ---------------- Input Toogle for Tax calculation  -----------------------*/
+
+#switch {
+	position: relative;
+	display: inline-block;
+	width: 38px;
+	height: 24px;
+}
+
+#switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #b0b0b0;
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+
+.slider:before {
+	position: absolute;
+	content: "";
+	height: 21px;
+	width: 23px;
+	left: 2px;
+	bottom: 2px;
+	background-color: white;
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+
+input:checked+.slider {
+	background-color: #222222;
+}
+
+input:focus+.slider {
+	box-shadow: 0 0 1px #222222;
+}
+
+input:checked+.slider:before {
+
+	transform: translateX(11px);
+}
+
+
+.slider.round {
+	border-radius: 34px;
+}
+
+.slider.round:before {
+	border-radius: 50%;
+}
+
+
+/* --------------Image grid --------------------*/
+
+.grid-gallery {
+	box-sizing: border-box;
+	margin-top: 20px;
+	align-items: center;
+	padding: 8px 40px;
+
+}
+
+.grid-gallery-row {
+	display: flex;
+	justify-content: space-between;
+	height: 400px;
+	margin-bottom: 45px;
+
+}
+
+.grid-container {
+	display: grid;
+	width: 23.5%;
+	height: 100%;
+
+}
+
+.like-button {
+	position: absolute;
+	top: 18px;
+	right: 20px;
+}
+
+.like-icon {
+	background: none;
+	border: none;
+	font-size: 20px;
+	cursor: pointer;
+	transition: color 0.3s ease;
+}
+
+.like-icon .fa-heart {
+	color: #222222;
+	text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+}
+
+
+.heart-icon {
+	font-size: 24px;
+	color: #ccc;
+	cursor: pointer;
+	transition: color 0.3s ease;
+
+}
+
+
+.like-icon .fa-heart.filled {
+	color: rgba(253, 71, 71, 0.82);
+	text-shadow: none;
+}
+
+.image-gallery {
+	position: relative;
+	max-width: 800px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.slides {
+	display: flex;
+	transition: transform 0.3s ease-in-out;
+}
+
+.slides img {
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+}
+
+.prev-button,
+.next-button {
+	position: absolute;
+	top: 50%;
+	border-radius: 100%;
+	background-color: white;
+	transform: translateY(-50%);
+	padding: 6px 10px;
+	border: none;
+	cursor: pointer;
+}
+
+.arrow {
+	border: solid black;
+	border-width: 0 3px 3px 0;
+	display: inline-block;
+	padding: 2.5px;
+}
+
+.right {
+	transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+}
+
+.left {
+	transform: rotate(135deg);
+	-webkit-transform: rotate(135deg);
+}
+
+.grid-container .prev-button img {
+	text-decoration: none;
+	background-color: none;
+	width: 10px;
+	height: 10px;
+
+}
+
+.next-button {
+	right: 10px;
+}
+
+.prev-button {
+	left: 10px;
+}
+
+.grid-container img {
+	width: 100%;
+	height: 310px;
+	object-fit: cover;
+	border-radius: 5%;
+
+}
+
+.grid-text-field {
+	height: 90px;
+    font-size:15px;
+    font-family: 'Geologica', sans-serif;
+
+}
+
+.grid-text-field span {
+	float: right;
+    font-family: 'Geologica', sans-serif;
+}
+
+.grid-text-field span img {
+	width: auto;
+	height: 12.5px;
+	padding: 0;
+	margin: 0;
+    font-family: 'Geologica', sans-serif;
+}
+
+
+.grid-container a {
+	text-decoration: none;
+	padding-top: 20px;
+	color: #000;
+    font-family: 'Geologica', sans-serif;
+}
+
+.grid-container h4 {
+	font-weight: 400;
+	padding-top: 8px;
+    font-family: 'Geologica', sans-serif;
+
+}
+
+.grid-container p {
+	font-weight: 300;
+	padding-top: 4px;
+	color: #717171;
+    font-family: 'Geologica', sans-serif;
+
+}
+
+.output-rate{
+    color: #000;
+}
+
+/* -------- Media query for devices width more than 1440px-------*/
+
+@media (min-width: 1440px) {
+	.nav-primary {
+		padding: 8px 80px;
+	}
+
+	.center-section {
+		padding: 8px 80px;
+	}
+
+	.grid-gallery {
+		padding: 8px 80px;
+	}
+
+	.landingPopup p {
+		font-size: 18px;
+	}
+
 }
